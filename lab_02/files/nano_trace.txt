@@ -1,0 +1,1121 @@
+execve("/usr/bin/nano", ["nano", "test.txt"], 0xffffecc6c448 /* 47 vars */) = 0
+brk(NULL)                               = 0xc1f158d52000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xf598ce668000
+faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=63871, ...}) = 0
+mmap(NULL, 63871, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce622000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libncursesw.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=264208, ...}) = 0
+mmap(NULL, 393624, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xf598ce5c1000
+mmap(0xf598ce5d0000, 328088, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xf598ce5d0000
+munmap(0xf598ce5c1000, 61440)           = 0
+munmap(0xf598ce621000, 408)             = 0
+mprotect(0xf598ce609000, 90112, PROT_NONE) = 0
+mmap(0xf598ce61f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3f000) = 0xf598ce61f000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=265416, ...}) = 0
+mmap(NULL, 329928, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xf598ce57f000
+mmap(0xf598ce580000, 264392, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xf598ce580000
+munmap(0xf598ce57f000, 4096)            = 0
+munmap(0xf598ce5c1000, 59592)           = 0
+mprotect(0xf598ce5af000, 53248, PROT_NONE) = 0
+mmap(0xf598ce5bc000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3c000) = 0xf598ce5bc000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xf598ce3b2000
+mmap(0xf598ce3c0000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xf598ce3c0000
+munmap(0xf598ce3b2000, 57344)           = 0
+munmap(0xf598ce57e000, 8080)            = 0
+mprotect(0xf598ce55a000, 77824, PROT_NONE) = 0
+mmap(0xf598ce56d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0xf598ce56d000
+mmap(0xf598ce572000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xf598ce572000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xf598ce666000
+set_tid_address(0xf598ce6664f0)         = 5925
+set_robust_list(0xf598ce666500, 24)     = 0
+rseq(0xf598ce666b40, 0x20, 0, 0xd428bc00) = 0
+mprotect(0xf598ce56d000, 12288, PROT_READ) = 0
+mprotect(0xf598ce5bc000, 16384, PROT_READ) = 0
+mprotect(0xf598ce61f000, 4096, PROT_READ) = 0
+mprotect(0xc1f14395f000, 4096, PROT_READ) = 0
+mprotect(0xf598ce670000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0xf598ce622000, 63871)           = 0
+ioctl(1, VBG_IOCTL_VMMDEV_REQUEST_BIG or VT_GETSTATE, 0xffffcca26328) = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+fcntl(0, F_GETFL)                       = 0x80002 (flags O_RDWR|O_CLOEXEC)
+fcntl(0, F_SETFL, O_RDWR|O_CLOEXEC)     = 0
+getrandom("\xc4\x9b\xad\x99\xe8\x5f\x93\x5a", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0xc1f158d52000
+brk(0xc1f158d73000)                     = 0xc1f158d73000
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=14596880, ...}) = 0
+mmap(NULL, 14596880, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598cd5d4000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+read(3, "# Locale name alias data base.\n#"..., 1024) = 1024
+read(3, "und for the time being for\n# bac"..., 1024) = 1024
+read(3, "-8859-1\ngalego\t\tgl_ES.ISO-8859-1"..., 1024) = 948
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=258, ...}) = 0
+mmap(NULL, 258, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce665000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/aarch64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=27028, ...}) = 0
+mmap(NULL, 27028, PROT_READ, MAP_SHARED, 3, 0) = 0xf598ce65e000
+close(3)                                = 0
+futex(0xf598ce57166c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MEASUREMENT", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=23, ...}) = 0
+mmap(NULL, 23, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce65d000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TELEPHONE", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=47, ...}) = 0
+mmap(NULL, 47, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce65c000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_ADDRESS", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=127, ...}) = 0
+mmap(NULL, 127, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce65b000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NAME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NAME", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=62, ...}) = 0
+mmap(NULL, 62, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce65a000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_PAPER", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_PAPER", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=34, ...}) = 0
+mmap(NULL, 34, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce659000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=38, ...}) = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=48, ...}) = 0
+mmap(NULL, 48, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce631000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_MONETARY", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=270, ...}) = 0
+mmap(NULL, 270, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce630000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_COLLATE", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1406, ...}) = 0
+mmap(NULL, 1406, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce62f000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_TIME", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_TIME", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3360, ...}) = 0
+mmap(NULL, 3360, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce62e000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_NUMERIC", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=50, ...}) = 0
+mmap(NULL, 50, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598ce62d000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/locale/C.UTF-8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/locale/C.utf8/LC_CTYPE", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=360460, ...}) = 0
+mmap(NULL, 360460, PROT_READ, MAP_PRIVATE, 3, 0) = 0xf598cd57b000
+close(3)                                = 0
+ioctl(1, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+getuid()                                = 1000
+geteuid()                               = 1000
+getgid()                                = 1000
+getegid()                               = 1000
+getuid()                                = 1000
+geteuid()                               = 1000
+getgid()                                = 1000
+getegid()                               = 1000
+newfstatat(AT_FDCWD, "/home/ubuntu/.terminfo", 0xc1f158d56f70, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/etc/terminfo", {st_mode=S_IFDIR|0755, st_size=29, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/lib/terminfo", 0xc1f158d56ff0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/share/terminfo", {st_mode=S_IFDIR|0755, st_size=153, ...}, 0) = 0
+faccessat(AT_FDCWD, "/etc/terminfo/x/xterm-256color", R_OK) = -1 ENOENT (No such file or directory)
+faccessat(AT_FDCWD, "/usr/share/terminfo/x/xterm-256color", R_OK) = 0
+getuid()                                = 1000
+setfsuid(1000)                          = 1000
+getgid()                                = 1000
+setfsgid(1000)                          = 1000
+openat(AT_FDCWD, "/usr/share/terminfo/x/xterm-256color", O_RDONLY) = 3
+geteuid()                               = 1000
+setfsuid(1000)                          = 1000
+getegid()                               = 1000
+setfsgid(1000)                          = 1000
+fstat(3, {st_mode=S_IFREG|0644, st_size=4071, ...}) = 0
+read(3, "\36\2%\0&\0\17\0\235\1Z\6xterm-256color|xterm"..., 32768) = 4071
+read(3, "", 28672)                      = 0
+close(3)                                = 0
+ioctl(1, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TIOCGWINSZ, {ws_row=31, ws_col=105, ws_xpixel=0, ws_ypixel=0}) = 0
+ioctl(1, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TIOCGWINSZ, {ws_row=31, ws_col=105, ws_xpixel=0, ws_ypixel=0}) = 0
+brk(0xc1f158d94000)                     = 0xc1f158d94000
+brk(0xc1f158db5000)                     = 0xc1f158db5000
+ioctl(1, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCSETSW, {c_iflag=IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS, {c_iflag=IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS, {c_iflag=IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCSETSW, {c_iflag=IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS, {c_iflag=IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigaction(SIGTSTP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=0xf598ce5ef5a0, sa_mask=[], sa_flags=SA_RESTART}, NULL, 8) = 0
+rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0xf598ce5ef790, sa_mask=[], sa_flags=SA_RESTART}, NULL, 8) = 0
+rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0xf598ce5ef790, sa_mask=[], sa_flags=SA_RESTART}, NULL, 8) = 0
+rt_sigaction(SIGWINCH, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGWINCH, {sa_handler=0xf598ce5e5e00, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+ioctl(1, TCGETS, {c_iflag=IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+faccessat(AT_FDCWD, "/etc/nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/etc/nanorc", {st_mode=S_IFREG|0644, st_size=11424, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/nanorc", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=11424, ...}) = 0
+read(3, "## Sample initialization file fo"..., 1024) = 1024
+read(3, "ue backup files in.\n# set backup"..., 1024) = 1024
+read(3, "this number.\n# set fill -8\n\n## D"..., 1024) = 1024
+read(3, " the same order.\n# set matchbrac"..., 1024) = 1024
+read(3, "ank\n## string means the operatin"..., 1024) = 1024
+read(3, "a changed buffer automatically o"..., 1024) = 1024
+read(3, "t be greater than 0.\n# set tabsi"..., 1024) = 1024
+read(3, "of a single character, and witho"..., 1024) = 1024
+read(3, "= Syntax coloring ===\n## For all"..., 1024) = 1024
+openat(AT_FDCWD, "/usr/share/nano", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+fstat(4, {st_mode=S_IFDIR|0755, st_size=874, ...}) = 0
+getdents64(4, 0xc1f158da7d80 /* 46 entries */, 32768) = 1560
+getdents64(4, 0xc1f158da7d80 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/asm.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/asm.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/asm.nanorc", {st_mode=S_IFREG|0644, st_size=714, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/asm.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=714, ...}) = 0
+read(4, "## Syntax highlighting for assem"..., 1024) = 714
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/autoconf.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/autoconf.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/autoconf.nanorc", {st_mode=S_IFREG|0644, st_size=635, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/autoconf.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=635, ...}) = 0
+read(4, "## Syntax highlighting for Autoc"..., 1024) = 635
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/awk.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/awk.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/awk.nanorc", {st_mode=S_IFREG|0644, st_size=1339, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/awk.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1339, ...}) = 0
+read(4, "## Syntax highlighting for AWK s"..., 1024) = 1024
+read(4, "er)\\>\"\ncolor magenta \"\\<(mktime|"..., 1024) = 315
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/c.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/c.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/c.nanorc", {st_mode=S_IFREG|0644, st_size=1926, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/c.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1926, ...}) = 0
+read(4, "## Syntax highlighting for C and"..., 1024) = 1024
+read(4, "color magenta \"\\<(break|continue"..., 1024) = 902
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/changelog.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/changelog.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/changelog.nanorc", {st_mode=S_IFREG|0644, st_size=790, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/changelog.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=790, ...}) = 0
+read(4, "## Syntax highlighting for Chang"..., 1024) = 790
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/cmake.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/cmake.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/cmake.nanorc", {st_mode=S_IFREG|0644, st_size=824, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/cmake.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=824, ...}) = 0
+read(4, "## Syntax highlighting for CMake"..., 1024) = 824
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/css.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/css.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/css.nanorc", {st_mode=S_IFREG|0644, st_size=485, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/css.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=485, ...}) = 0
+read(4, "## Syntax highlighting for CSS f"..., 1024) = 485
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/debian.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/debian.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/debian.nanorc", {st_mode=S_IFREG|0644, st_size=801, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/debian.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=801, ...}) = 0
+read(4, "## Syntax highlighting for apt's"..., 1024) = 801
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/default.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/default.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/default.nanorc", {st_mode=S_IFREG|0644, st_size=775, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/default.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=775, ...}) = 0
+read(4, "## This is an example of a defau"..., 1024) = 775
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/elisp.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/elisp.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/elisp.nanorc", {st_mode=S_IFREG|0644, st_size=1108, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/elisp.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1108, ...}) = 0
+read(4, "## Syntax highlighting for Emacs"..., 1024) = 1024
+read(4, "nd=\"[^\\]\"\"\ncolor yellow \"\"([^\"\\]"..., 1024) = 84
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/email.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/email.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/email.nanorc", {st_mode=S_IFREG|0644, st_size=340, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/email.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=340, ...}) = 0
+read(4, "## Syntax highlighting for email"..., 1024) = 340
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/go.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/go.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/go.nanorc", {st_mode=S_IFREG|0644, st_size=1446, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/go.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1446, ...}) = 0
+read(4, "## Syntax highlighting for Go.\n\n"..., 1024) = 1024
+brk(0xc1f158dd6000)                     = 0xc1f158dd6000
+read(4, "-9]+i\\>\"\n\n# Strings and characte"..., 1024) = 422
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/groff.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/groff.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/groff.nanorc", {st_mode=S_IFREG|0644, st_size=742, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/groff.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=742, ...}) = 0
+read(4, "## Syntax highlighting for groff"..., 1024) = 742
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/guile.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/guile.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/guile.nanorc", {st_mode=S_IFREG|0644, st_size=562, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/guile.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=562, ...}) = 0
+read(4, "## Syntax highlighting for Guile"..., 1024) = 562
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/haskell.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/haskell.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/haskell.nanorc", {st_mode=S_IFREG|0644, st_size=1009, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/haskell.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1009, ...}) = 0
+read(4, "## Syntax highlighting for Haske"..., 1024) = 1009
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/html.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/html.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/html.nanorc", {st_mode=S_IFREG|0644, st_size=1286, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/html.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1286, ...}) = 0
+read(4, "## Syntax highlighting for HTML."..., 1024) = 1024
+read(4, "|selected|shape|size|span|src|st"..., 1024) = 262
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/java.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/java.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/java.nanorc", {st_mode=S_IFREG|0644, st_size=654, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/java.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=654, ...}) = 0
+read(4, "## Syntax highlighting for Java."..., 1024) = 654
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/javascript.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/javascript.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/javascript.nanorc", {st_mode=S_IFREG|0644, st_size=822, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/javascript.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=822, ...}) = 0
+read(4, "## Syntax highlighting for Javas"..., 1024) = 822
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/json.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/json.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/json.nanorc", {st_mode=S_IFREG|0644, st_size=805, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/json.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=805, ...}) = 0
+read(4, "## Syntax highlighting for JSON "..., 1024) = 805
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/lua.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/lua.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/lua.nanorc", {st_mode=S_IFREG|0644, st_size=2461, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/lua.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=2461, ...}) = 0
+read(4, "## Syntax highlighting for Lua.\n"..., 1024) = 1024
+read(4, "tyellow \"\\<io\\.(close|flush|inpu"..., 1024) = 1024
+read(4, "alse|nil|true)\\>\"\n\n# Decimal and"..., 1024) = 413
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/makefile.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/makefile.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/makefile.nanorc", {st_mode=S_IFREG|0644, st_size=536, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/makefile.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=536, ...}) = 0
+read(4, "## Syntax highlighting for Makef"..., 1024) = 536
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/man.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/man.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/man.nanorc", {st_mode=S_IFREG|0644, st_size=717, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/man.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=717, ...}) = 0
+read(4, "## Syntax highlighting for man p"..., 1024) = 717
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/markdown.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/markdown.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/markdown.nanorc", {st_mode=S_IFREG|0644, st_size=947, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/markdown.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=947, ...}) = 0
+read(4, "## Syntax highlighting for Markd"..., 1024) = 947
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/nanohelp.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/nanohelp.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/nanohelp.nanorc", {st_mode=S_IFREG|0644, st_size=594, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/nanohelp.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=594, ...}) = 0
+read(4, "## This is meant for highlightin"..., 1024) = 594
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/nanorc.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/nanorc.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/nanorc.nanorc", {st_mode=S_IFREG|0644, st_size=4325, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/nanorc.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=4325, ...}) = 0
+read(4, "## Syntax highlighting for nanor"..., 1024) = 1024
+read(4, "c|comment|formatter|linter|tabgi"..., 1024) = 1024
+read(4, "*bind[[:blank:]]+((\\^([A-Za-z]|["..., 1024) = 1024
+read(4, "cket)|replace)\\}\"\ncolor crimson "..., 1024) = 1024
+read(4, "]](start=|end=)\"\n\n# Control code"..., 1024) = 229
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/nftables.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/nftables.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/nftables.nanorc", {st_mode=S_IFREG|0644, st_size=927, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/nftables.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=927, ...}) = 0
+read(4, "## Syntax highlighting for the p"..., 1024) = 927
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/objc.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/objc.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/objc.nanorc", {st_mode=S_IFREG|0644, st_size=1487, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/objc.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1487, ...}) = 0
+read(4, "## Syntax highlighting for C/C++"..., 1024) = 1024
+read(4, "hite \"\\[[^][:blank:]]*\\]\"\n\n# Str"..., 1024) = 463
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/ocaml.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/ocaml.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/ocaml.nanorc", {st_mode=S_IFREG|0644, st_size=831, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/ocaml.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=831, ...}) = 0
+read(4, "## Syntax highlighting for OCaml"..., 1024) = 831
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/patch.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/patch.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/patch.nanorc", {st_mode=S_IFREG|0644, st_size=600, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/patch.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=600, ...}) = 0
+read(4, "## Syntax highlighting for patch"..., 1024) = 600
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/perl.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/perl.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/perl.nanorc", {st_mode=S_IFREG|0644, st_size=2119, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/perl.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=2119, ...}) = 0
+read(4, "## Syntax highlighting for Perl."..., 1024) = 1024
+read(4, "m(ctl|get|op))\\>\"\ncolor red \"\\<("..., 1024) = 1024
+read(4, "=\"(^use| = new)\" end=\";\"\n\n# Comm"..., 1024) = 71
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/php.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/php.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/php.nanorc", {st_mode=S_IFREG|0644, st_size=1081, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/php.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1081, ...}) = 0
+read(4, "## Syntax highlighting for PHP.\n"..., 1024) = 1024
+read(4, "*/\"\n\n# Trailing whitespace.\ncolo"..., 1024) = 57
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/po.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/po.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/po.nanorc", {st_mode=S_IFREG|0644, st_size=1181, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/po.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1181, ...}) = 0
+read(4, "## Syntax highlighting for PO fi"..., 1024) = 1024
+read(4, "yellow \"\\<(FIXME|TODO|XXX)\\>\"\n# "..., 1024) = 157
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/python.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/python.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/python.nanorc", {st_mode=S_IFREG|0644, st_size=1406, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/python.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1406, ...}) = 0
+read(4, "## Syntax highlighting for Pytho"..., 1024) = 1024
+read(4, "ghtgreen start=\"'''([^'),]|$)\" e"..., 1024) = 382
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/ruby.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/ruby.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/ruby.nanorc", {st_mode=S_IFREG|0644, st_size=1343, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/ruby.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1343, ...}) = 0
+read(4, "## Syntax highlighting for Ruby."..., 1024) = 1024
+read(4, "\"#\\{[^}]*\\}\"\n# Strings, single-q"..., 1024) = 319
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/rust.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/rust.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/rust.nanorc", {st_mode=S_IFREG|0644, st_size=1036, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/rust.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1036, ...}) = 0
+read(4, "## Syntax highlighting for Rust."..., 1024) = 1024
+read(4, "XME|\\?\\?\\?\"\n", 1024)      = 12
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/sh.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/sh.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/sh.nanorc", {st_mode=S_IFREG|0644, st_size=1527, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/sh.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1527, ...}) = 0
+read(4, "## Syntax highlighting for Bourn"..., 1024) = 1024
+read(4, "l \"[.-]tar\\>\"\n\n# Basic variable "..., 1024) = 503
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/sql.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/sql.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/sql.nanorc", {st_mode=S_IFREG|0644, st_size=2406, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/sql.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=2406, ...}) = 0
+read(4, "## Syntax highlighting for (Post"..., 1024) = 1024
+read(4, "RT|INTERSECT|INTO|IS)\\>\"\nicolor "..., 1024) = 1024
+read(4, "][[:alnum:]_$]*\"\"\n\n# Strings.\nco"..., 1024) = 358
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/tcl.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/tcl.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/tcl.nanorc", {st_mode=S_IFREG|0644, st_size=2133, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/tcl.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=2133, ...}) = 0
+read(4, "## Syntax highlighting for Tcl a"..., 1024) = 1024
+read(4, "s|last|(byte)?length|map|match|r"..., 1024) = 1024
+read(4, " whitespace:\ncolor ,green \"[[:sp"..., 1024) = 85
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/tex.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/tex.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/tex.nanorc", {st_mode=S_IFREG|0644, st_size=199, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/tex.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=199, ...}) = 0
+read(4, "## Syntax highlighting for TeX f"..., 1024) = 199
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/texinfo.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/texinfo.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/texinfo.nanorc", {st_mode=S_IFREG|0644, st_size=834, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/texinfo.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=834, ...}) = 0
+read(4, "## Syntax highlighting for Texin"..., 1024) = 834
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/xml.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/xml.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/xml.nanorc", {st_mode=S_IFREG|0644, st_size=686, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/xml.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=686, ...}) = 0
+read(4, "## Syntax highlighting for XML f"..., 1024) = 686
+brk(0xc1f158df7000)                     = 0xc1f158df7000
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+faccessat(AT_FDCWD, "/usr/share/nano/yaml.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/yaml.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/yaml.nanorc", {st_mode=S_IFREG|0644, st_size=1368, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/yaml.nanorc", O_RDONLY) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1368, ...}) = 0
+read(4, "## Syntax highlighting for YAML "..., 1024) = 1024
+read(4, " !!(binary|bool|float|int|map|nu"..., 1024) = 344
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+read(3, "word to the right of the cursor."..., 1024) = 1024
+read(3, "}{mark}{prevword}{execute}|sed '"..., 1024) = 1024
+read(3, " execute\n#bind ^L linter execute"..., 1024) = 160
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+geteuid()                               = 1000
+faccessat(AT_FDCWD, "/home/ubuntu/.nanorc", R_OK) = -1 ENOENT (No such file or directory)
+faccessat(AT_FDCWD, "/home/ubuntu/.config/nano/nanorc", R_OK) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/ubuntu/.nano/", 0xffffcca26370, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/ubuntu/.local/share/nano/", 0xffffcca26370, 0) = -1 ENOENT (No such file or directory)
+mkdirat(AT_FDCWD, "/home/ubuntu/.local", 0700) = -1 EEXIST (File exists)
+mkdirat(AT_FDCWD, "/home/ubuntu/.local/share", 0700) = -1 EEXIST (File exists)
+mkdirat(AT_FDCWD, "/home/ubuntu/.local/share/nano/", 0700) = 0
+openat(AT_FDCWD, "/home/ubuntu/.local/share/nano/search_history", O_RDONLY) = -1 ENOENT (No such file or directory)
+ioctl(1, TCGETS, {c_iflag=IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCSETSW, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+write(1, "\33[?2004h", 8)               = 8
+write(1, "\33[?1049h\33[22;0;0t\33[1;31r\33(B\33[m\33["..., 54) = 54
+write(1, "\33[?1h\33=", 7)              = 7
+write(1, "\33[?25l", 6)                 = 6
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=0xc1f143919e44, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0xc1f143919e44, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGWINCH, {sa_handler=0xc1f143915d34, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGCONT, {sa_handler=0xc1f143918170, sa_mask=~[RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=0xc1f143919e70, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESETHAND|0xffffffff00000000}, NULL, 8) = 0
+rt_sigaction(SIGABRT, {sa_handler=0xc1f143919e70, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESETHAND|0xffffffff00000000}, NULL, 8) = 0
+newfstatat(AT_FDCWD, "test.txt", {st_mode=S_IFREG|0664, st_size=25, ...}, 0) = 0
+getcwd("/home/ubuntu/Desktop", 1024)    = 21
+newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0755, st_size=100, ...}, 0) = 0
+faccessat(AT_FDCWD, ".", X_OK)          = 0
+faccessat(AT_FDCWD, ".", W_OK)          = 0
+newfstatat(AT_FDCWD, "./.test.txt.swp", 0xffffcca26088, 0) = -1 ENOENT (No such file or directory)
+getpid()                                = 5925
+geteuid()                               = 1000
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=594, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=260, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=594, ...}) = 0
+read(3, "# /etc/nsswitch.conf\n#\n# Example"..., 1024) = 594
+read(3, "", 1024)                       = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=594, ...}) = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2948, ...}) = 0
+brk(0xc1f158e18000)                     = 0xc1f158e18000
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 2948
+close(3)                                = 0
+brk(0xc1f158e17000)                     = 0xc1f158e17000
+uname({sysname="Linux", nodename="ubuntu", ...}) = 0
+unlinkat(AT_FDCWD, "./.test.txt.swp", 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "./.test.txt.swp", O_WRONLY|O_CREAT|O_EXCL, 0666) = 3
+fcntl(3, F_GETFL)                       = 0x20001 (flags O_WRONLY|O_LARGEFILE)
+fstat(3, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+write(3, "b0nano 7.2\0\0\0\0\0\0\0\0\0\0\0\0\0\0%\27\0\0ubun"..., 1024) = 1024
+close(3)                                = 0
+getcwd("/home/ubuntu/Desktop", 1024)    = 21
+readlinkat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", 0xffffcca25ae0, 1023) = -1 EINVAL (Invalid argument)
+newfstatat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", {st_mode=S_IFREG|0664, st_size=25, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", {st_mode=S_IFREG|0664, st_size=25, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", {st_mode=S_IFREG|0664, st_size=25, ...}, 0) = 0
+rt_sigprocmask(SIG_BLOCK, [WINCH], NULL, 8) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigaction(SIGINT, {sa_handler=0xc1f143915d10, sa_mask=[], sa_flags=0}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, 8) = 0
+openat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", O_RDONLY) = 3
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigprocmask(SIG_UNBLOCK, [WINCH], NULL, 8) = 0
+fcntl(3, F_GETFL)                       = 0x20000 (flags O_RDONLY|O_LARGEFILE)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+write(1, "\33[39;49m\33(B\33[m\33[H\33[2J\33[29;46H", 29) = 29
+write(1, "\33(B\33[0;7m[ Reading... ]", 23) = 23
+write(1, "\33(B\33[m", 6)               = 6
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigaction(SIGINT, {sa_handler=0xc1f143915d10, sa_mask=[], sa_flags=0}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [WINCH], NULL, 8) = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=25, ...}) = 0
+read(3, "Hello, Operating System!\n", 4096) = 25
+read(3, "", 4096)                       = 0
+rt_sigprocmask(SIG_UNBLOCK, [WINCH], NULL, 8) = 0
+close(3)                                = 0
+faccessat(AT_FDCWD, "test.txt", W_OK)   = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\33[29;52H", 8)               = 8
+write(1, "\33(B\33[0;7m 1 lin", 15)     = 15
+write(1, "e ]", 3)                      = 3
+write(1, "\33(B\33[m", 6)               = 6
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+newfstatat(AT_FDCWD, "test.txt", {st_mode=S_IFREG|0664, st_size=25, ...}, 0) = 0
+getcwd("/home/ubuntu/Desktop", 1024)    = 21
+readlinkat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", 0xffffcca25c00, 1023) = -1 EINVAL (Invalid argument)
+newfstatat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", {st_mode=S_IFREG|0664, st_size=25, ...}, 0) = 0
+brk(0xc1f158e38000)                     = 0xc1f158e38000
+faccessat(AT_FDCWD, "/usr/share/nano/default.nanorc", R_OK) = 0
+faccessat(AT_FDCWD, "/usr/share/nano/default.nanorc", R_OK) = 0
+newfstatat(AT_FDCWD, "/usr/share/nano/default.nanorc", {st_mode=S_IFREG|0644, st_size=775, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/nano/default.nanorc", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=775, ...}) = 0
+read(3, "## This is an example of a defau"..., 1024) = 775
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\33[H", 3)                    = 3
+write(1, "\33(B\33[0;7m  GNU nano 7.2         "..., 122) = 122
+write(1, "\33(B\33[m", 6)               = 6
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\r\33[30d", 6)                = 6
+write(1, "\33(B\33[0;7m^G\33(B\33[m Help\33[30;16H", 30) = 30
+write(1, "\33(B\33[0;7m^O\33(B\33[m Write Out   \33("..., 89) = 89
+write(1, "\33(B\33[0;7m^T\33(B\33[m Execute     \33("..., 89) = 89
+write(1, "\33(B\33[0;7m^X\33(B\33[m Exit\33[31;16H", 30) = 30
+write(1, "\33(B\33[0;7m^R\33(B\33[m Read File   \33("..., 88) = 88
+write(1, "\33(B\33[0;7m^J\33(B\33[m Justify     \33("..., 83) = 83
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+brk(0xc1f158e59000)                     = 0xc1f158e59000
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\r\33[2d", 5)                 = 5
+write(1, "Hello, Operating System!\r", 25) = 25
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+read(0, "\33", 1)                       = 1
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=50000000}, NULL, 0) = 1 ([{fd=0, revents=POLLIN}], left {tv_sec=0, tv_nsec=49997334})
+read(0, "O", 1)                         = 1
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=50000000}, NULL, 0) = 1 ([{fd=0, revents=POLLIN}], left {tv_sec=0, tv_nsec=49970750})
+read(0, "B", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\33[3d", 4)                   = 4
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "T", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\33[1;61H", 7)                = 7
+write(1, "\33(B\33[0;7m*\33[104G", 16)  = 16
+write(1, "\33(B\33[m", 6)               = 6
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+getpid()                                = 5925
+geteuid()                               = 1000
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=594, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2948, ...}) = 0
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 2948
+close(3)                                = 0
+uname({sysname="Linux", nodename="ubuntu", ...}) = 0
+unlinkat(AT_FDCWD, "./.test.txt.swp", 0) = 0
+openat(AT_FDCWD, "./.test.txt.swp", O_WRONLY|O_CREAT|O_EXCL, 0666) = 3
+fcntl(3, F_GETFL)                       = 0x20001 (flags O_WRONLY|O_LARGEFILE)
+fstat(3, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+write(3, "b0nano 7.2\0\0\0\0\0\0\0\0\0\0\0\0\0\0%\27\0\0ubun"..., 1024) = 1024
+close(3)                                = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\r\33[3d", 5)                 = 5
+write(1, "T", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "h", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "h", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "e", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "e", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, " ", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, " ", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "W", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "W", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "o", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "o", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "r", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "r", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "l", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "l", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "d", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "d", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, " ", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, " ", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "i", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "i", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "s", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "s", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, " ", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, " ", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "G", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "G", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "o", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "o", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "o", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "o", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "d", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "d", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "!", 1)                         = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "!", 1)                        = 1
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "\17", 1)                       = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\r\33[29d", 6)                = 6
+write(1, "\33[K\33[30;16H", 11)         = 11
+write(1, "           \33(B\33[0;7mM-D\33(B\33[m DO"..., 90) = 90
+write(1, "\33(B\33[0;7mM-B\33(B\33[m Backup File\33["..., 40) = 40
+write(1, "\33(B\33[0;7mC\33(B\33[m Cancel\33[16G", 28) = 28
+write(1, "           \33(B\33[0;7mM-M\33(B\33[m Ma"..., 91) = 91
+write(1, "\33(B\33[0;7m^T\33(B\33[m Browse\33[K", 27) = 27
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\r\33[29d", 6)                = 6
+write(1, "\33(B\33[0;7mFile Name to Write: tes"..., 122) = 122
+write(1, "\33(B\33[m", 6)               = 6
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+read(0, "\r", 1)                        = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+getcwd("/home/ubuntu/Desktop", 1024)    = 21
+readlinkat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", 0xffffcca25b00, 1023) = -1 EINVAL (Invalid argument)
+newfstatat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", {st_mode=S_IFREG|0664, st_size=25, ...}, 0) = 0
+getcwd("/home/ubuntu/Desktop", 1024)    = 21
+readlinkat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", 0xffffcca25b00, 1023) = -1 EINVAL (Invalid argument)
+newfstatat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", {st_mode=S_IFREG|0664, st_size=25, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/ubuntu/Desktop/test.txt", {st_mode=S_IFREG|0664, st_size=25, ...}, 0) = 0
+newfstatat(AT_FDCWD, "test.txt", {st_mode=S_IFREG|0664, st_size=25, ...}, 0) = 0
+rt_sigprocmask(SIG_BLOCK, [WINCH], NULL, 8) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigaction(SIGINT, {sa_handler=0xc1f143915d10, sa_mask=[], sa_flags=0}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, 8) = 0
+openat(AT_FDCWD, "test.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=0}, NULL, 8) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigprocmask(SIG_UNBLOCK, [WINCH], NULL, 8) = 0
+fcntl(3, F_GETFL)                       = 0x20001 (flags O_WRONLY|O_LARGEFILE)
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\33[29;45H", 8)               = 8
+write(1, "\33[1K ", 5)                  = 5
+write(1, "\33(B\33[0;7m[ Writing... ]\33(B\33[m\33[K", 32) = 32
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+write(3, "Hello, Operating System!\nThe Wor"..., 44) = 44
+fsync(3)                                = 0
+close(3)                                = 0
+newfstatat(AT_FDCWD, "test.txt", {st_mode=S_IFREG|0664, st_size=44, ...}, 0) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\33[1;61H", 7)                = 7
+write(1, "\33(B\33[0;7m \33[104G", 16)  = 16
+write(1, "\33(B\33[m", 6)               = 6
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\33[29;45H", 8)               = 8
+write(1, "\33(B\33[0;7m[ Wrote 2 lin", 22) = 22
+write(1, "es ]", 4)                     = 4
+write(1, "\33(B\33[m", 6)               = 6
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\33[30;16H", 8)               = 8
+write(1, "\33(B\33[0;7m^O\33(B\33[m Write Out   \33("..., 180) = 180
+write(1, "\33(B\33[0;7mX\33(B\33[m Exit  \33[16G", 28) = 28
+write(1, "\33(B\33[0;7m^R\33(B\33[m Read File   \33("..., 173) = 173
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\33[3;19H", 7)                = 7
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+read(0, "\30", 1)                       = 1
+write(1, "\33[?25l", 6)                 = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+unlinkat(AT_FDCWD, "./.test.txt.swp", 0) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTART}, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, 8) = 0
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\r\33[29d", 6)                = 6
+ppoll([{fd=0, events=POLLIN}], 1, {tv_sec=0, tv_nsec=0}, NULL, 0) = 0 (Timeout)
+write(1, "\33[J\33[31d", 8)             = 8
+rt_sigaction(SIGTSTP, {sa_handler=0xc1f143918044, sa_mask=~[KILL STOP RTMIN RT_1], sa_flags=0}, NULL, 8) = 0
+write(1, "\33[?12l\33[?25h", 12)        = 12
+write(1, "\33[31;1H\33[?1049l\33[23;0;0t\r\33[?1l\33>", 32) = 32
+ioctl(1, TCGETS, {c_iflag=IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|, c_cflag=B38400|CS8|CREAD, c_lflag=ECHOE|ECHOK|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCSETSW, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+write(1, "\33[?2004l", 8)               = 8
+ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
