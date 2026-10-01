@@ -1,5 +1,8 @@
-//
-// Created by Александр on 10/1/26.
-//
+#include "../include/multiply.h"
+#include "../include/structs.h"
 
-#include "multiply.h"
+
+comp multiply(comp a, comp b) {
+    comp res = {a.re * b.re - a.im * b.im, a.re * b.im + a.im * b.re};
+    return res;
+}
