@@ -130,24 +130,24 @@ int main(void) {
 
 
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            comp num = {5, 5};
-            A[i][j] = num;
-            B[i][j] = multiply(num, num);
-        }
-    }
-    comp C[2][2];
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            comp res = {0, 0};
-            for (int k = 0; k < 2; k++) {
-                comp mlt = multiply(A[i][k], B[k][j]);
-                res.re += mlt.re;
-                res.im += mlt.im;
-            }
-            C[i][j] = res;
-        }
-    }
+    // for (int i = 0; i < 2; i++) {
+    //     for (int j = 0; j < 2; j++) {
+    //         comp num = {5, 5};
+    //         A[i][j] = num;
+    //         B[i][j] = multiply(num, num);
+    //     }
+    // }
+    // comp C[2][2];
+    // for (int i = 0; i < 2; i++) {
+    //     for (int j = 0; j < 2; j++) {
+    //         comp res = {0, 0};
+    //         for (int k = 0; k < 2; k++) {
+    //             comp mlt = multiply(A[i][k], B[k][j]);
+    //             res.re += mlt.re;
+    //             res.im += mlt.im;
+    //         }
+    //         C[i][j] = res;
+    //     }
+    // }
     return 0;
 }
