@@ -5,6 +5,7 @@
 #include "../include/matrix_fill.h"
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 int main(int argc, char *argv[]) {
     if (argc != 3 || strcmp(argv[1], "-t") != 0) {
@@ -118,8 +119,29 @@ int main(int argc, char *argv[]) {
         C[k] = row;
     }
 
-    A = matrix_fill(A, rows_1, cols_1);
-    B = matrix_fill(B, rows_2, cols_2);
+    if (matrix_fill(A, rows_1, cols_1) == NULL) {
+        for (int i = 0; i < rows_1; i++) free(C[i]);
+        free(C);
+        for (int j = 0; j < rows_2; j++) free(B[j]);
+        free(B);
+        for (int p = 0; p < rows_1; p++) free(A[p]);
+        free(A);
+        fprintf(stderr, "Matrix filling failed!\n");
+        free(string);
+        return -1;
+    }
+
+    if (matrix_fill(B, rows_2, cols_2) == NULL) {
+        for (int i = 0; i < rows_1; i++) free(C[i]);
+        free(C);
+        for (int j = 0; j < rows_2; j++) free(B[j]);
+        free(B);
+        for (int p = 0; p < rows_1; p++) free(A[p]);
+        fprintf(stderr, "Matrix filling failed!\n");
+        free(string);
+        free(A);
+        return -1;
+    }
 
 
     long threads_count = max_threads < rows_1 ? max_threads : rows_1;
@@ -148,6 +170,9 @@ int main(int argc, char *argv[]) {
         free(threads);
         return -1;
     }
+
+    struct timespec start, finish;
+    clock_gettime(CLOCK_MONOTONIC, &start);
 
     long created = 0;
     for (int i = 0; i < threads_count; i++) {
@@ -184,6 +209,11 @@ int main(int argc, char *argv[]) {
             return -1;
         }
     }
+
+    clock_gettime(CLOCK_MONOTONIC, &finish);
+
+    double elapsed = (finish.tv_sec - start.tv_sec) + (finish.tv_nsec - start.tv_nsec) / 1000000000.0;
+    fprintf(stdout, "Time: %.6f s\n", elapsed);
 
     for (int i = 0; i < rows_1; i++) {
         for (int j = 0; j < cols_2; j++) {
