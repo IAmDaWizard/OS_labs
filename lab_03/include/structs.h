@@ -2,8 +2,8 @@
 #define OS_LABS_STRUCTS_H
 
 typedef struct Complex {
-    int re;
-    int im;
+    long re;
+    long im;
 } comp;
 
 
