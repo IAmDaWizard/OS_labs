@@ -31,6 +31,14 @@ OS_labs/
 │   ├── CMakeLists.txt
 │   └── README.md
 │
+├── lab_04/
+│   ├── file/
+│   ├── include/
+│   ├── src/
+│   ├── .gitignore
+│   ├── CMakeLists.txt
+│   └── README.md
+│
 ├── .gitignore
 ├── CMakeLists.txt
 ├── LICENSE
@@ -48,7 +56,7 @@ The exact internal structure may differ between laboratory works depending on th
 | [Lab 01](./lab_01/) | Processes and Pipes | Completed |
 | [Lab 02](./lab_02/) | System Call Profiling | Completed |
 | [Lab 03](./lab_03/) | Multithreaded Matrix Multiplication | Completed |
-| Lab 04 | — | Planned |
+| [Lab 04](./lab_04/) | Memory-Mapped Files and Semaphores | Completed |
 
 The list will be updated as new laboratory works are completed.
 
@@ -426,6 +434,110 @@ More information about the implementation, synchronization, thread distribution,
 
 ---
 
+## Lab 04 — Memory-Mapped Files and Semaphores
+
+The fourth laboratory work focuses on **inter-process communication through memory-mapped files** and process synchronization using named POSIX semaphores.
+
+The assignment reuses Variant 6 from Lab 01. The input file contains an arbitrary number of integer values on each line. A separate child program reads the file, calculates the sum of every line, and transfers each result to the parent through shared memory.
+
+Only the parent program is started manually. It creates the child process with `fork()`, redirects the child's standard input to the selected file using `dup2()`, and starts the separate child executable using `execlp()`.
+
+### Shared Memory
+
+The parent creates a temporary file using:
+
+```c
+mkstemp()
+```
+
+sets its size with:
+
+```c
+ftruncate()
+```
+
+and maps it into memory using:
+
+```c
+mmap(..., PROT_READ | PROT_WRITE, MAP_SHARED, ...)
+```
+
+The child inherits the mapping file descriptor, maps the same file, and communicates with the parent through a shared `SharedData` structure:
+
+```c
+typedef struct {
+    MessageType type;
+    size_t line_number;
+    long long sum;
+    char error_text[256];
+} SharedData;
+```
+
+The message type identifies whether the shared slot contains:
+
+- a calculated result (`MESSAGE_RESULT`);
+- an end-of-file notification (`MESSAGE_DONE`);
+- an error reported by the child (`MESSAGE_ERROR`).
+
+Although each process may map the file at a different virtual address, both mappings refer to the same underlying file region. Changes made by the child are therefore visible to the parent.
+
+### Semaphore Synchronization
+
+The shared structure represents one message slot. Two named semaphores coordinate access to it:
+
+| Semaphore | Initial Value | Purpose |
+|---|---:|---|
+| `empty` | `1` | The shared slot is free and the child may write |
+| `ready` | `0` | A complete message is available for the parent |
+
+For every input line, the child:
+
+1. waits for `empty`;
+2. writes the result to shared memory;
+3. signals `ready`.
+
+The parent:
+
+1. waits for `ready`;
+2. reads and prints the message;
+3. signals `empty` so the next result can be written.
+
+This implements a one-slot producer-consumer protocol:
+
+```text
+Child                                 Parent
+  |                                      |
+  | sem_wait(empty)                      |
+  | write SharedData                     |
+  | sem_post(ready) -------------------> |
+  |                                      | read and print
+  | <------------------- sem_post(empty) |
+  |                                      |
+```
+
+### Input Processing
+
+The child reads the redirected standard input using `getline()`, separates values using `strtok()`, and converts each value using `strtol()`.
+
+Each value is checked against the valid range of type `int`, while the calculated sum is stored as `long long`.
+
+The laboratory work covers:
+
+- creating and executing a separate child process;
+- redirecting standard input with `dup2()`;
+- file-backed shared memory with `mmap()` and `MAP_SHARED`;
+- temporary file creation with `mkstemp()`;
+- named POSIX semaphores;
+- producer-consumer synchronization;
+- structured messages between processes;
+- input validation and error propagation;
+- child status handling with `waitpid()`;
+- systematic cleanup of mappings, semaphores, files, and descriptors.
+
+More information about the implementation, shared structure, synchronization protocol, building, running, and error handling can be found in the [Lab 04 README](./lab_04/README.md).
+
+---
+
 ## Technologies and Tools
 
 The laboratory works use:
@@ -433,6 +545,8 @@ The laboratory works use:
 - **C**
 - **POSIX API**
 - **POSIX Threads (`pthread`)**
+- **POSIX named semaphores**
+- **Memory-mapped files (`mmap`)**
 - **Linux**
 - **macOS**
 - **GCC / Clang**
@@ -496,6 +610,9 @@ The main goals of this repository are to:
 - learn how processes are created and executed;
 - study inter-process communication mechanisms;
 - understand pipes and file descriptors;
+- exchange structured data through memory-mapped files;
+- synchronize separate processes using named semaphores;
+- understand producer-consumer communication protocols;
 - work with low-level input and output;
 - analyze system calls performed by real applications;
 - understand the difference between processes and threads;
