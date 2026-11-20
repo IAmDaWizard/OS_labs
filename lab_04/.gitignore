@@ -1,0 +1,7 @@
+build/
+.idea/
+.vscode/
+parent
+child
+*.o
+*.out
