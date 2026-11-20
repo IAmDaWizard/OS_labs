@@ -1,10 +1,6 @@
-#define _POSIX_C_SOURCE 200809L
-
-#include "common.h"
-#include "parent.h"
-
+#include "../include/common.h"
+#include "../include/parent.h"
 #include <errno.h>
-#include <fcntl.h>
 #include <semaphore.h>
 #include <signal.h>
 #include <stdio.h>
@@ -12,7 +8,6 @@
 #include <string.h>
 #include <sys/mman.h>
 #include <sys/stat.h>
-#include <sys/types.h>
 #include <sys/wait.h>
 #include <time.h>
 #include <unistd.h>
@@ -61,15 +56,11 @@ static int make_child_path(const char *program_name, char *buffer,
     return 0;
 }
 
-/*
- * Ждём сообщение, но периодически проверяем, не завершился ли child аварийно.
- * Это защищает parent от вечного зависания, например при ошибке exec().
- */
 static int wait_for_message(sem_t *ready, pid_t child_pid,
                             int *child_was_reaped, int *child_status) {
     const struct timespec pause = {.tv_sec = 0, .tv_nsec = 10 * 1000 * 1000};
 
-    for (;;) {
+    while (1) {
         if (sem_trywait(ready) == 0) {
             return 0;
         }
@@ -106,11 +97,6 @@ typedef struct {
     int child_status;
 } ParentResources;
 
-/*
- * Завершает дочерний процесс (если нужно) и освобождает все ресурсы parent.
- * Поля структуры заранее получают специальные значения -1, MAP_FAILED и
- * SEM_FAILED, поэтому функцию безопасно вызывать после любой ошибки.
- */
 static int cleanup_parent(ParentResources *resources, int result) {
     if (resources->child_pid > 0 && !resources->child_was_reaped) {
         if (result != EXIT_SUCCESS) {
@@ -184,7 +170,7 @@ int run_parent(const char *program_name) {
         perror("mkstemp");
         return cleanup_parent(&resources, EXIT_FAILURE);
     }
-    if (ftruncate(resources.mapping_fd, (off_t)sizeof(SharedData)) == -1) {
+    if (ftruncate(resources.mapping_fd, sizeof(SharedData)) == -1) {
         perror("ftruncate");
         return cleanup_parent(&resources, EXIT_FAILURE);
     }
@@ -196,7 +182,6 @@ int run_parent(const char *program_name) {
         return cleanup_parent(&resources, EXIT_FAILURE);
     }
     memset(resources.shared, 0, sizeof(*resources.shared));
-    resources.shared->magic = SHARED_MAGIC;
 
     snprintf(resources.empty_name, sizeof(resources.empty_name),
              "/lab4_empty_%ld", (long)getpid());
@@ -242,16 +227,10 @@ int run_parent(const char *program_name) {
     close(resources.input_fd);
     resources.input_fd = -1;
 
-    for (;;) {
+    while (1) {
         if (wait_for_message(resources.ready, resources.child_pid,
                              &resources.child_was_reaped,
                              &resources.child_status) == -1) {
-            return cleanup_parent(&resources, EXIT_FAILURE);
-        }
-
-        if (resources.shared->magic != SHARED_MAGIC) {
-            fprintf(stderr, "Общая память повреждена.\n");
-            sem_post(resources.empty);
             return cleanup_parent(&resources, EXIT_FAILURE);
         }
 
